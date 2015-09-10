@@ -8,7 +8,7 @@
 			var parentIndex = t.model.attributes.external_id.split(",").length - 1
 			var t_id = t.model.attributes.external_id.split(",")[parentIndex];
 			
-			if(t_id && parent_id && t_id == parent_id){
+			if(t_id && parent_id && t_id == parent_id && t.model.attributes.id != task.model.attributes.id){
 				t.prevBackground = t.$el.css("background-image");
 				t.$el.css("background-image", "url(/images/notes/orange.png)");
 			} 	

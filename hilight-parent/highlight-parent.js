@@ -5,13 +5,16 @@
   
   var childStyle = ".child{   -webkit-filter: brightness(125%);   filter:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' ><filter id='bright125'><feComponentTransfer><feFuncR type='linear' slope='1.25'/><feFuncG type='linear' slope='1.25' /><feFuncB type='linear' slope='1.25' /></feComponentTransfer></filter></svg>#bright125\");   filter:brightness(125%); }"
 
+	$('<style>').html(parentStyle).appendTo('head');
+	$('<style>').html(childStyle).appendTo('head');
+
   addHighlightParentLogic = function(task) {
 
 	var applyToChild = function(tt, pfunc){
 		var childIdsString = tt.model.attributes.custom_field_2;
 		window.board.tasks.each(function(t){
 			var t_id = t.model.attributes.external_id;
-			if(t_id && parent_id && childIdsString.indexOf(t_id) >= 0 && t.model.attributes.id != task.model.attributes.id){
+			if(t_id && childIdsString && childIdsString.indexOf(t_id) >= 0 && t.model.attributes.id != task.model.attributes.id){
 				pfunc(t)
 			} 	
 		});

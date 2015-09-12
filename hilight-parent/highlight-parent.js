@@ -1,7 +1,7 @@
 (function() {
 	var addHighlightParentLogic;
 	
-	var parentStyle = "-webkit-filter: sepia(100%);   filter:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' ><filter id='sepia'><feColorMatrix in='SourceGraphic' type='matrix' values='.393 .769 .189 0 0    .349 .686 .168 0 0    .272 .534 .181 0 0    0 0 0 1 0' /></filter></svg>#sepia\");   filter:sepia(100%);"
+	var parentStyle = ".parent{ -webkit-filter: sepia(100%);   filter:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' ><filter id='sepia'><feColorMatrix in='SourceGraphic' type='matrix' values='.393 .769 .189 0 0    .349 .686 .168 0 0    .272 .534 .181 0 0    0 0 0 1 0' /></filter></svg>#sepia\");   filter:sepia(100%);}"
 	
 	var childStyle = ".child{   -webkit-filter: brightness(125%);   filter:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' ><filter id='bright125'><feComponentTransfer><feFuncR type='linear' slope='1.25'/><feFuncG type='linear' slope='1.25' /><feFuncB type='linear' slope='1.25' /></feComponentTransfer></filter></svg>#bright125\");   filter:brightness(125%); }"
 	

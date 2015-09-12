@@ -31,13 +31,13 @@
 
 	
 
-    	$(task.$el).on("mouseover", function(){
+    	$(task.$el).find(".external_id").on("mouseover", function(){
 		applyToTask(task, 
 			function(t){t.$el.addClass("parent");}, 
 			function(t){t.$el.addClass("child");},
 			function(t){t.$el.addClass("hidden");})
 	});
-	$(task.$el).on("mouseout", function(){
+	$(task.$el).find(".external_id").on("mouseout", function(){
 		applyToTask(task, 
 			function(t){t.$el.removeClass("parent");}, 
 			function(t){t.$el.removeClass("child");},

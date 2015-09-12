@@ -15,8 +15,6 @@
 
 	var applyToTask = function(tt, pfunc, cfunc, ofunc){
 		var parent_id = tt.model.attributes.custom_field_1;
-		if(parent_id)
-			tt.$el.find(".external_id").after("<img width='16px' src='http://www.vigilanzalalince.it/sito/wp-content/themes/lince/wpv_theme/assets/images/icons/gray_32/user.png' />")
 		var childIdsString = tt.model.attributes.custom_field_2;
 		window.board.tasks.each(function(t){
 			var t_id = t.model.attributes.external_id;

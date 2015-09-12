@@ -3,7 +3,7 @@
 	
 	var parentStyle = ".parent { background-image: url(/images/notes/red.png) !important; transform: rotate(3deg) scale(1.1) !important; }"
 	
-	var childStyle = ".child{ background-image: url(/images/notes/blue.png) !important; transform: rotate(3deg) scale(0.9) !important; }"
+	var childStyle = ".child{ color: #2a2a2a; }"
 	
 	var hiddenStyle = ".hidden{ opacity: 0.3; }"
   

@@ -1,9 +1,9 @@
 (function() {
 	var addHighlightParentLogic;
 	
-	var parentStyle = ".parent { background-image: url(/images/notes/red.png);  }"
+	var parentStyle = ".parent { background-image: url(/images/notes/red.png) !important;  }"
 	
-	var childStyle = ".child{ background-image: url(/images/notes/blue.png); }"
+	var childStyle = ".child{ background-image: url(/images/notes/blue.png) !important; }"
 	
 	var hiddenStyle = ".hidden{ opacity: 0.3; }"
   

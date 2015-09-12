@@ -1,42 +1,47 @@
 (function() {
-  var addHighlightParentLogic;
-
-  var parentStyle = ".parent{  -webkit-filter: saturate(50%);  filter:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' ><filter id='saturate50'><feColorMatrix in='SourceGraphic' type='saturate' values='0.5' /></filter></svg>#saturate50\");   filter:saturate(50%); }"
+	var addHighlightParentLogic;
+	
+	var parentStyle = ".parent{  -webkit-filter: saturate(50%);  filter:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' ><filter id='saturate50'><feColorMatrix in='SourceGraphic' type='saturate' values='0.5' /></filter></svg>#saturate50\");   filter:saturate(50%); }"
+	
+	var childStyle = ".child{   -webkit-filter: brightness(125%);   filter:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' ><filter id='bright125'><feComponentTransfer><feFuncR type='linear' slope='1.25'/><feFuncG type='linear' slope='1.25' /><feFuncB type='linear' slope='1.25' /></feComponentTransfer></filter></svg>#bright125\");   filter:brightness(125%); }"
+	
+	var hiddenStyle = ".hidden{ opacity: 0.2;"
   
-  var childStyle = ".child{   -webkit-filter: brightness(125%);   filter:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' ><filter id='bright125'><feComponentTransfer><feFuncR type='linear' slope='1.25'/><feFuncG type='linear' slope='1.25' /><feFuncB type='linear' slope='1.25' /></feComponentTransfer></filter></svg>#bright125\");   filter:brightness(125%); }"
-
 	$('<style>').html(parentStyle).appendTo('head');
 	$('<style>').html(childStyle).appendTo('head');
+	$('<style>').html(hiddenStyle).appendTo('head');
 
   addHighlightParentLogic = function(task) {
 
-	var applyToChild = function(tt, pfunc){
+	var applyToTask = function(tt, pfunc, cfunc, ofunc){
+		var parent_id = tt.model.attributes.custom_field_1;
 		var childIdsString = tt.model.attributes.custom_field_2;
 		window.board.tasks.each(function(t){
 			var t_id = t.model.attributes.external_id;
-			if(t_id && childIdsString && childIdsString.indexOf(t_id) >= 0 && t.model.attributes.id != task.model.attributes.id){
-				pfunc(t)
+			if(t_id && t.model.attributes.id != task.model.attributes.id){
+				if(childIdsString && childIdsString.indexOf(t_id) >= 0)
+					cfunc(t)
+				else if (parent_id && t_id == parent_id)
+					pfunc(t)
+				else
+					ofunc(t)
 			} 	
 		});
 	}
 
-	var applyToParent = function(tt, pfunc){
-		var parent_id = tt.model.attributes.custom_field_1;
-		window.board.tasks.each(function(t){
-			var t_id = t.model.attributes.external_id;
-			if(t_id && parent_id && t_id == parent_id && t.model.attributes.id != task.model.attributes.id){
-				pfunc(t)
-			} 	
-		});
-	}
+	
 
     	$(task.$el).on("mouseover", function(){
-		applyToParent(task, function(t){t.$el.addClass("parent");})
-		applyToChild(task, function(t){t.$el.addClass("child");})
+		applyToTask(task, 
+			function(t){t.$el.addClass("parent");}, 
+			function(t){t.$el.addClass("child");},
+			function(t){t.$el.addClass("hidden");})
 	});
 	$(task.$el).on("mouseout", function(){
-		applyToParent(task, function(t){t.$el.removeClass("parent")})
-		applyToChild(task, function(t){t.$el.removeClass("child")})		
+		applyToTask(task, 
+			function(t){t.$el.removeClass("parent");}, 
+			function(t){t.$el.removeClass("child");},
+			function(t){t.$el.removeClass("hidden");})		
 	});
 
     return task.$el.find('.task_name');

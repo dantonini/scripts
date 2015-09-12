@@ -1,9 +1,9 @@
 (function() {
 	var addHighlightParentLogic;
 	
-	var parentStyle = ".parent { background-image: url(/images/notes/red.png) !important;  }"
+	var parentStyle = ".parent { background-image: url(/images/notes/red.png) !important; transform: scale(1.3); }"
 	
-	var childStyle = ".child{ background-image: url(/images/notes/blue.png) !important; }"
+	var childStyle = ".child{ background-image: url(/images/notes/blue.png) !important; scale(0.7); }"
 	
 	var hiddenStyle = ".hidden{ opacity: 0.3; }"
   
@@ -15,6 +15,8 @@
 
 	var applyToTask = function(tt, pfunc, cfunc, ofunc){
 		var parent_id = tt.model.attributes.custom_field_1;
+		if(parent_id)
+			tt.$el.find(".external_id").after("<img width='16px' src='http://www.vigilanzalalince.it/sito/wp-content/themes/lince/wpv_theme/assets/images/icons/gray_32/user.png' />")
 		var childIdsString = tt.model.attributes.custom_field_2;
 		window.board.tasks.each(function(t){
 			var t_id = t.model.attributes.external_id;
@@ -29,20 +31,24 @@
 		});
 	}
 
-	
+	var parent_id = task.model.attributes.custom_field_1;
+	if(parent_id && parent_id != ""){
+		tt.$el.find(".external_id").after("<img class='has-parent' width='16px' src='http://www.vigilanzalalince.it/sito/wp-content/themes/lince/wpv_theme/assets/images/icons/gray_32/user.png' />")	
 
-    	$(task.$el).find(".external_id").on("mouseover", function(){
-		applyToTask(task, 
-			function(t){t.$el.addClass("parent");}, 
-			function(t){t.$el.addClass("child");},
-			function(t){t.$el.addClass("hidden");})
-	});
-	$(task.$el).find(".external_id").on("mouseout", function(){
-		applyToTask(task, 
-			function(t){t.$el.removeClass("parent");}, 
-			function(t){t.$el.removeClass("child");},
-			function(t){t.$el.removeClass("hidden");})		
-	});
+	    	$(task.$el).find(".has-parent").on("mouseover", function(){
+			applyToTask(task, 
+				function(t){t.$el.addClass("parent");}, 
+				function(t){t.$el.addClass("child");},
+				function(t){t.$el.addClass("hidden");})
+		});
+		$(task.$el).find(".has-parent").on("mouseout", function(){
+			applyToTask(task, 
+				function(t){t.$el.removeClass("parent");}, 
+				function(t){t.$el.removeClass("child");},
+				function(t){t.$el.removeClass("hidden");})		
+		});	
+	}
+	
 
     return task.$el.find('.task_name');
   };

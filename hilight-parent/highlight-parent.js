@@ -1,7 +1,7 @@
 (function() {
 	var addHighlightParentLogic;
 	
-	var parentStyle = ".parent{  -webkit-filter: saturate(50%);  filter:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' ><filter id='saturate50'><feColorMatrix in='SourceGraphic' type='saturate' values='0.5' /></filter></svg>#saturate50\");   filter:saturate(50%); }"
+	var parentStyle = ".parent{  -webkit-filter: invert();   filter:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' ><filter id='invert'><feComponentTransfer><feFuncR type='linear' slope='-1' intercept='1'/><feFuncG type='linear' slope='-1' intercept='1' /><feFuncB type='linear' slope='-1' intercept='1' /></feComponentTransfer></filter></svg>#invert\");   filter:invert(); }"
 	
 	var childStyle = ".child{   -webkit-filter: brightness(125%);   filter:url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' ><filter id='bright125'><feComponentTransfer><feFuncR type='linear' slope='1.25'/><feFuncG type='linear' slope='1.25' /><feFuncB type='linear' slope='1.25' /></feComponentTransfer></filter></svg>#bright125\");   filter:brightness(125%); }"
 	

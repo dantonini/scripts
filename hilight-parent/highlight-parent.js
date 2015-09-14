@@ -30,7 +30,7 @@
 	}
 
 	var hasParent = task.model.attributes.custom_field_1 && task.model.attributes.custom_field_1 != "";
-	var hasChldren = task.model.attributes.custom_field_2 && task.model.attributes.custom_field_2 != "";
+	var hasChildren = task.model.attributes.custom_field_2 && task.model.attributes.custom_field_2 != "";
 	if(hasParent || hasChildren){
 		
 		var image = "parent";

@@ -1,11 +1,11 @@
 (function() {
 	var addHighlightParentLogic;
 	
-	var parentStyle = ".parent { background-image: url(/images/notes/orange.png) !important; -webkit-transition: background-image 0.2s ease-in-out; transition: background-image 0.2s ease-in-out;}"
+	var parentStyle = ".parent { background-image: url(/images/notes/orange.png) !important; -webkit-transition: background-image 0.4s ease-in-out; transition: background-image 0.4s ease-in-out;}"
 	
-	var childStyle = ".child{ color: #2a2a2a !important; background-image: url(/images/notes/blue.png) !important; -webkit-transition: background-image 0.2s ease-in-out; transition: background-image 0.2s ease-in-out; }"
+	var childStyle = ".child{ color: #2a2a2a !important; background-image: url(/images/notes/blue.png) !important; -webkit-transition: background-image 0.4s ease-in-out; transition: background-image 0.4s ease-in-out; }"
 	
-	var hiddenStyle = ".hidden{ opacity: 0.3; -webkit-transition: opacity .15s ease-in-out;         -moz-transition: opacity .15s ease-in-out;         -ms-transition: opacity .15s ease-in-out;         -o-transition: opacity .15s ease-in-out;         transition: opacity .15s ease-in-out;}"
+	var hiddenStyle = ".hidden{ opacity: 0.3; -webkit-transition: opacity .4s ease-in-out;         -moz-transition: opacity .4s ease-in-out;         -ms-transition: opacity .4s ease-in-out;         -o-transition: opacity .4s ease-in-out;         transition: opacity .4s ease-in-out;}"
   
 	$('<style>').html(parentStyle).appendTo('head');
 	$('<style>').html(childStyle).appendTo('head');

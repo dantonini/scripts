@@ -29,10 +29,10 @@
 
 	    	$(task.$el).find(".has-parent-or-children").on("mouseover", function(){
 			
-			if(!hasParent)
-				$(task.$el).addClass("parent");
+			if(hasParent)
+				$(task.$el).addClass("child");
 			else
-				$(task.$el).addClass("child");			
+				$(task.$el).addClass("parent");			
 
 			window.board.tasks.each(function(t){
 					

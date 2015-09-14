@@ -11,47 +11,45 @@
 	$('<style>').html(childStyle).appendTo('head');
 	$('<style>').html(hiddenStyle).appendTo('head');
 
-  addHighlightParentLogic = function(task) {
+  	addHighlightParentLogic = function(task) {
 
-	var applyToTask = function(tt, pfunc, cfunc, ofunc){
-		var parent_id = tt.model.attributes.custom_field_1;
-		var childIdsString = tt.model.attributes.custom_field_2;
-		window.board.tasks.each(function(t){
-			var t_id = t.model.attributes.external_id;
-			if(t_id && t.model.attributes.id != task.model.attributes.id){
-				if(childIdsString && childIdsString.indexOf(t_id) >= 0)
-					cfunc(t)
-				else if (parent_id && t_id == parent_id)
-					pfunc(t)
-				else
-					ofunc(t)
-			} 	
-		});
-	}
-
-	var hasParent = task.model.attributes.custom_field_1 && task.model.attributes.custom_field_1 != "";
-	var hasChildren = task.model.attributes.custom_field_2 && task.model.attributes.custom_field_2 != "";
+	var parent_id = tt.model.attributes.custom_field_1;
+	var childIdsString = tt.model.attributes.custom_field_2;
+	var hasParent = parent_id && parent_id != "";
+	var hasChildren = childIdsString && childIdsString != "";
 	if(hasParent || hasChildren){
 		
 		var image = "parent";
 		if(hasParent && hasChildren)
-			image = "parent-child";
+			image = "child";
 		else if(hasParent)
 			image = "child";
 
 		task.$el.find(".external_id").after("<img class='has-parent-or-children' style='margin:2px;' width='16px' src='https://raw.githubusercontent.com/salvatoreromeo/scripts/master/hilight-parent/" + image + ".png' />")	
 
 	    	$(task.$el).find(".has-parent-or-children").on("mouseover", function(){
-			applyToTask(task, 
-				function(t){t.$el.addClass("parent");}, 
-				function(t){t.$el.addClass("child");},
-				function(t){t.$el.addClass("hidden");})
+
+			window.board.tasks.each(function(t){
+				$(task.$el).addClass("child");	
+				if(!hasParent)
+					$(task.$el).addClass("parent");
+				var t_id = t.model.attributes.external_id;
+				if(t_id && t.model.attributes.id != task.model.attributes.id){
+					if(childIdsString && childIdsString.indexOf(t_id) >= 0)
+						t.$el.addClass("child");
+					else if (parent_id && t_id == parent_id)
+						t.$el.addClass("parent");
+					else
+						t.$el.addClass("hidden");
+				} 	
+			});
 		});
 		$(task.$el).find(".has-parent-or-children").on("mouseout", function(){
-			applyToTask(task, 
-				function(t){t.$el.removeClass("parent");}, 
-				function(t){t.$el.removeClass("child");},
-				function(t){t.$el.removeClass("hidden");})		
+			window.board.tasks.each(function(t){
+				t.$el.removeClass("parent"); 
+				t.$el.removeClass("child");
+				t.$el.removeClass("hidden");
+			});		
 		});	
 	}
 	

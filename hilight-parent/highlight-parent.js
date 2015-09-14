@@ -28,13 +28,15 @@
 		task.$el.find(".external_id").after("<img class='has-parent-or-children' style='margin:2px;' width='16px' src='https://raw.githubusercontent.com/salvatoreromeo/scripts/master/hilight-parent/" + image + ".png' />")	
 
 	    	$(task.$el).find(".has-parent-or-children").on("mouseover", function(){
+			
+			if(!hasParent)
+				$(task.$el).addClass("parent");
+			else
+				$(task.$el).addClass("child");			
 
 			window.board.tasks.each(function(t){
 					
-				if(!hasParent)
-					$(task.$el).addClass("parent");
-				else
-					$(task.$el).addClass("child");
+				
 				var t_id = t.model.attributes.external_id;
 				if(t_id && t.model.attributes.id != task.model.attributes.id){
 					if(childIdsString && childIdsString.indexOf(t_id) >= 0)

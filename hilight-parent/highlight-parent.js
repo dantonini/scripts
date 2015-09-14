@@ -34,16 +34,23 @@
 			else
 				$(task.$el).addClass("parent");			
 
+			var parent;
 			window.board.tasks.each(function(t){
-					
-				
 				var t_id = t.model.attributes.external_id;
 				if(t_id && t.model.attributes.id != task.model.attributes.id){
-					if(childIdsString && childIdsString.indexOf(t_id) >= 0)
-						t.$el.addClass("child");
-					else if (parent_id && t_id == parent_id)
+					if (parent_id && t_id == parent_id){
 						t.$el.addClass("parent");
-					else
+						parent = t;
+					}
+				} 	
+			});
+			window.board.tasks.each(function(t){
+				var t_id = t.model.attributes.external_id;
+				var parentChildIdsString = parent.model.attributes.custom_field_2
+				if(t_id && t.model.attributes.id != parent.model.attributes.id){
+					if(parentChildIdsString && parentChildIdsString.indexOf(t_id) >= 0)
+						t.$el.addClass("child");
+					else 
 						t.$el.addClass("hidden");
 				} 	
 			});

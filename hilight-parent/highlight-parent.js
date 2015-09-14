@@ -30,9 +30,11 @@
 	    	$(task.$el).find(".has-parent-or-children").on("mouseover", function(){
 
 			window.board.tasks.each(function(t){
-				$(task.$el).addClass("child");	
+					
 				if(!hasParent)
 					$(task.$el).addClass("parent");
+				else
+					$(task.$el).addClass("child");
 				var t_id = t.model.attributes.external_id;
 				if(t_id && t.model.attributes.id != task.model.attributes.id){
 					if(childIdsString && childIdsString.indexOf(t_id) >= 0)

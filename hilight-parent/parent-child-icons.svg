@@ -14,7 +14,7 @@
    id="svg2985"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 2">
+   sodipodi:docname="parent-child-icons.svg">
   <defs
      id="defs2987" />
   <sodipodi:namedview
@@ -25,7 +25,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="15.696216"
-     inkscape:cx="30.085582"
+     inkscape:cx="22.727121"
      inkscape:cy="-1.3549951"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -52,136 +52,150 @@
      id="layer1"
      inkscape:label="Layer 1"
      inkscape:groupmode="layer">
-    <rect
-       style="opacity:0.01000001;fill:#ffffff;stroke:none"
-       id="rect3809"
-       width="16"
-       height="16"
-       x="37.843513"
-       y="21.159506"
-       rx="0"
-       ry="0"
-       inkscape:export-filename="/home/salvatore.romeo/parent-child.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
-    <rect
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="/home/salvatore.romeo/child.png"
-       ry="0"
-       rx="0"
-       y="21.159506"
-       x="18.412081"
-       height="16"
-       width="16"
-       id="rect3807"
-       style="opacity:0.01000001;fill:#ffffff;stroke:none" />
-    <rect
-       style="opacity:0.01000001;fill:#ffffff;stroke:none"
-       id="rect3025"
-       width="16"
-       height="16"
-       x="-1.5927405"
-       y="21.222017"
-       rx="0"
-       ry="0"
-       inkscape:export-filename="/home/salvatore.romeo/parent.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
     <g
-       id="g3795"
-       transform="translate(-1.6228149,2.6162181)"
-       inkscape:export-filename="/home/salvatore.romeo/parent.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
-      <text
-         sodipodi:linespacing="125%"
-         id="text2993"
-         y="32.574364"
-         x="2.9878314"
-         style="font-size:19.09940529px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
-         xml:space="preserve"><tspan
-           y="32.574364"
-           x="2.9878314"
-           id="tspan2995"
-           sodipodi:role="line">P</tspan></text>
-      <rect
-         ry="1.16066"
-         rx="1.16066"
-         y="19.484667"
-         x="1.6585343"
-         height="14.242266"
-         width="12.74308"
-         id="rect2997"
-         style="fill:none;stroke:#333333;stroke-width:1.07350421" />
-    </g>
-    <g
-       id="g3802"
-       transform="translate(0.81269836,21.093205)"
-       inkscape:export-filename="/home/salvatore.romeo/child.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
-      <text
-         xml:space="preserve"
-         style="font-size:12.19588566px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
-         x="23.942852"
-         y="14.076861"
-         id="text2999"
-         sodipodi:linespacing="125%"><tspan
-           sodipodi:role="line"
-           id="tspan3001"
-           x="23.942852"
-           y="14.076861">C</tspan></text>
-      <rect
-         style="fill:none;stroke:#333333;stroke-width:1.07350421"
-         id="rect3003"
-         width="12.74308"
-         height="14.242266"
-         x="19.227842"
-         y="0.94516778"
-         rx="1.16066"
-         ry="1.16066" />
-    </g>
-    <g
-       id="g3811"
-       transform="translate(3.6796303,21.093205)"
-       inkscape:export-filename="/home/salvatore.romeo/parent-child.png"
+       id="g3032"
+       inkscape:export-filename="/home/salvatore.romeo/dev/temp/kanbantools/scripts/hilight-parent/parent.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <rect
-         ry="1.16066"
-         rx="1.16066"
-         y="0.94516778"
-         x="35.792343"
-         height="14.242266"
-         width="12.74308"
-         id="rect3009"
-         style="fill:none;stroke:#333333;stroke-width:1.07350421" />
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/salvatore.romeo/parent.png"
+         ry="0"
+         rx="0"
+         y="24.227665"
+         x="-1.5927405"
+         height="10"
+         width="16"
+         id="rect3025"
+         style="opacity:0.01000001;fill:#ffffff;stroke:none" />
       <g
-         transform="translate(-0.38305282,-0.32796443)"
-         id="g3019">
-        <text
-           sodipodi:linespacing="125%"
-           id="text3011"
-           y="14.362829"
-           x="35.989414"
-           style="font-size:19.09940529px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
-           xml:space="preserve"><tspan
-             y="14.362829"
-             x="35.989414"
-             id="tspan3013"
-             sodipodi:role="line">P</tspan></text>
+         style="fill:#666666"
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/salvatore.romeo/parent.png"
+         transform="matrix(1,0,0,0.51970614,-1.6228149,15.400467)"
+         id="g3795">
         <text
            xml:space="preserve"
-           style="font-size:10.63556671px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
-           x="42.817841"
-           y="14.224566"
-           id="text3015"
-           sodipodi:linespacing="125%"><tspan
+           style="font-size:16.79188347px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           x="1.9468489"
+           y="28.638845"
+           id="text2993"
+           sodipodi:linespacing="125%"
+           transform="scale(0.87918358,1.1374189)"><tspan
              sodipodi:role="line"
-             id="tspan3017"
-             x="42.817841"
-             y="14.224566">C</tspan></text>
+             id="tspan2995"
+             x="1.9468489"
+             y="28.638845">P</tspan></text>
+        <path
+           inkscape:connector-curvature="0"
+           id="rect2997"
+           d="m 2.8125,18.9375 c -0.931082,0 -1.6875,0.787668 -1.6875,1.71875 l 0,11.90625 c 0,0.931082 0.756418,1.6875 1.6875,1.6875 l 10.4375,0 c 0.931082,0 1.6875,-0.756418 1.6875,-1.6875 l 0,-11.90625 c 0,-0.931082 -0.756418,-1.71875 -1.6875,-1.71875 l -10.4375,0 z m 0,1.09375 10.4375,0 c 0.354929,0 0.625,0.270071 0.625,0.625 l 0,11.90625 c 0,0.354929 -0.270071,0.625 -0.625,0.625 l -10.4375,0 c -0.3549293,0 -0.625,-0.270071 -0.625,-0.625 l 0,-11.90625 c 0,-0.354929 0.2700707,-0.625 0.625,-0.625 z"
+           style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#666666;fill-opacity:1;stroke:none;stroke-width:1.07350421000000007;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
+      </g>
+    </g>
+    <g
+       id="g3039"
+       inkscape:export-filename="/home/salvatore.romeo/dev/temp/kanbantools/scripts/hilight-parent/child.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         style="opacity:0.01000001;fill:#ffffff;stroke:none"
+         id="rect3000"
+         width="16"
+         height="10"
+         x="18.412081"
+         y="24.227665"
+         rx="0"
+         ry="0"
+         inkscape:export-filename="/home/salvatore.romeo/parent.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <g
+         style="fill:#666666"
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/salvatore.romeo/child.png"
+         transform="matrix(1,0,0,0.51970614,0.81269836,25.035559)"
+         id="g3802">
+        <text
+           sodipodi:linespacing="125%"
+           id="text2999"
+           y="11.936549"
+           x="29.418179"
+           style="font-size:15.90734673px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           xml:space="preserve"
+           transform="scale(0.85303803,1.1722807)"><tspan
+             y="11.936549"
+             x="29.418179"
+             id="tspan3001"
+             sodipodi:role="line">C</tspan></text>
+        <path
+           inkscape:connector-curvature="0"
+           id="rect3003"
+           d="m 20.375,0.40625 c -0.931082,0 -1.6875,0.756418 -1.6875,1.6875 l 0,11.9375 c 0,0.931082 0.756418,1.6875 1.6875,1.6875 l 10.4375,0 c 0.931082,0 1.6875,-0.756418 1.6875,-1.6875 l 0,-11.9375 c 0,-0.931082 -0.756418,-1.6875 -1.6875,-1.6875 l -10.4375,0 z m 0,1.0625 10.4375,0 c 0.354929,0 0.625,0.2700707 0.625,0.625 l 0,11.9375 c 0,0.354929 -0.270071,0.625 -0.625,0.625 l -10.4375,0 c -0.354929,0 -0.625,-0.270071 -0.625,-0.625 l 0,-11.9375 c 0,-0.3549293 0.270071,-0.625 0.625,-0.625 z"
+           style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#666666;fill-opacity:1;stroke:none;stroke-width:1.07350421000000007;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
+      </g>
+    </g>
+    <g
+       id="g3046"
+       inkscape:export-filename="/home/salvatore.romeo/dev/temp/kanbantools/scripts/hilight-parent/parent-child.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/salvatore.romeo/parent.png"
+         ry="0"
+         rx="0"
+         y="24.227665"
+         x="37.652386"
+         height="10"
+         width="16"
+         id="rect3002"
+         style="opacity:0.01000001;fill:#ffffff;stroke:none" />
+      <g
+         style="fill:#666666"
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/salvatore.romeo/parent-child.png"
+         transform="matrix(1,0,0,0.50360417,3.6796303,25.097283)"
+         id="g3811">
+        <path
+           inkscape:connector-curvature="0"
+           id="rect3009"
+           d="m 36.9375,0.40625 c -0.931082,0 -1.6875,0.756418 -1.6875,1.6875 l 0,11.9375 c 0,0.931082 0.756418,1.6875 1.6875,1.6875 l 10.4375,0 c 0.931082,0 1.6875,-0.756418 1.6875,-1.6875 l 0,-11.9375 c 0,-0.931082 -0.756418,-1.6875 -1.6875,-1.6875 l -10.4375,0 z m 0,1.0625 10.4375,0 c 0.354929,0 0.625,0.2700707 0.625,0.625 l 0,11.9375 c 0,0.354929 -0.270071,0.625 -0.625,0.625 l -10.4375,0 c -0.354929,0 -0.59375,-0.270071 -0.59375,-0.625 l 0,-11.9375 c 0,-0.3549293 0.238821,-0.625 0.59375,-0.625 z"
+           style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#666666;fill-opacity:1;stroke:none;stroke-width:1.07350421;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
+        <g
+           style="fill:#666666"
+           id="g3019"
+           transform="translate(-0.38305282,-0.32796443)">
+          <text
+             xml:space="preserve"
+             style="font-size:16.60110283px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+             x="41.797665"
+             y="12.484096"
+             id="text3011"
+             sodipodi:linespacing="125%"
+             transform="scale(0.8691947,1.1504902)"><tspan
+               sodipodi:role="line"
+               id="tspan3013"
+               x="41.797665"
+               y="12.484096">P</tspan></text>
+          <text
+             sodipodi:linespacing="125%"
+             id="text3015"
+             y="10.737275"
+             x="56.323452"
+             style="font-size:13.97798824px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+             xml:space="preserve"
+             transform="scale(0.7629135,1.3107646)"><tspan
+               y="10.737275"
+               x="56.323452"
+               id="tspan3017"
+               sodipodi:role="line">C</tspan></text>
+        </g>
       </g>
     </g>
   </g>

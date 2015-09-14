@@ -39,7 +39,7 @@
 		else if(hasParent)
 			image = "child";
 
-		task.$el.find(".external_id").after("<img class='has-parent-or-children' width='16px' src='https://raw.githubusercontent.com/salvatoreromeo/scripts/master/hilight-parent/" + image + ".png' />")	
+		task.$el.find(".external_id").after("<img class='has-parent-or-children' style='margin:2px;' width='16px' src='https://raw.githubusercontent.com/salvatoreromeo/scripts/master/hilight-parent/" + image + ".png' />")	
 
 	    	$(task.$el).find(".has-parent-or-children").on("mouseover", function(){
 			applyToTask(task, 

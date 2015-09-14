@@ -34,7 +34,7 @@
 			else
 				$(task.$el).addClass("parent");			
 
-			var parent;
+			var parent = task;
 			window.board.tasks.each(function(t){
 				var t_id = t.model.attributes.external_id;
 				if(t_id && t.model.attributes.id != task.model.attributes.id){

@@ -29,11 +29,19 @@
 		});
 	}
 
-	var parent_id = task.model.attributes.custom_field_1;
-	if(parent_id && parent_id != ""){
-		task.$el.find(".external_id").after("<img class='has-parent' width='16px' src='http://www.vigilanzalalince.it/sito/wp-content/themes/lince/wpv_theme/assets/images/icons/gray_32/user.png' />")	
+	var hasParent = task.model.attributes.custom_field_1 && task.model.attributes.custom_field_1 != "";
+	var hasChldren = task.model.attributes.custom_field_2 && task.model.attributes.custom_field_2 != "";
+	if(hasParent || hasChildren){
+		
+		var image = "parent";
+		if(hasParent && hasChildren)
+			image = "parent-child";
+		else if(hasParent)
+			image = "child";
 
-	    	$(task.$el).find(".has-parent").on("mouseover", function(){
+		task.$el.find(".external_id").after("<img class='has-parent-or-children' width='16px' src='https://raw.githubusercontent.com/salvatoreromeo/scripts/master/hilight-parent/" + image + ".png' />")	
+
+	    	$(task.$el).find(".has-parent-or-children").on("mouseover", function(){
 			applyToTask(task, 
 				function(t){t.$el.addClass("parent");}, 
 				function(t){t.$el.addClass("child");},

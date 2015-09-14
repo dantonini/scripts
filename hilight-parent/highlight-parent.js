@@ -47,7 +47,7 @@
 				function(t){t.$el.addClass("child");},
 				function(t){t.$el.addClass("hidden");})
 		});
-		$(task.$el).find(".has-parent").on("mouseout", function(){
+		$(task.$el).find(".has-parent-or-children").on("mouseout", function(){
 			applyToTask(task, 
 				function(t){t.$el.removeClass("parent");}, 
 				function(t){t.$el.removeClass("child");},

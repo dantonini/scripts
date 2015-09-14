@@ -13,8 +13,8 @@
 
   	addHighlightParentLogic = function(task) {
 
-	var parent_id = tt.model.attributes.custom_field_1;
-	var childIdsString = tt.model.attributes.custom_field_2;
+	var parent_id = task.model.attributes.custom_field_1;
+	var childIdsString = task.model.attributes.custom_field_2;
 	var hasParent = parent_id && parent_id != "";
 	var hasChildren = childIdsString && childIdsString != "";
 	if(hasParent || hasChildren){
